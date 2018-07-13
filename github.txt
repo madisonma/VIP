@@ -1,0 +1,62 @@
+1、创建ssh keys
+$ssh-keygen -t rsa -C "774528399@qq.com"
+将id_rsa.pub里的内容复制到github设置--ssh里
+
+2、测试一下我们设置的是否正确
+ssh -T git@github.com
+
+
+3、设置用户名和邮箱否则后续也会提示的
+git config --global user.name madison.ma
+git config --global user.email 774528399@qq.com
+
+
+4、手动创建一个Repository---test01
+首先在本地创建一个目录（这个目录要和在GitHub上创建项目的名称一致）：依次执行如下命令
+mkdir test01
+cd test01
+git init
+touch README
+git add README
+git commit -m 'first commit'
+
+编辑README文件，添加内容
+将文件提交到GitHub中库中，
+git remote add origin git@github.com:madisonma/test01.git
+git push -u origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
